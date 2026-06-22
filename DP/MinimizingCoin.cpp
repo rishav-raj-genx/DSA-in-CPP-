@@ -9,15 +9,16 @@ int main(){
 
     for(auto &a:v)cin>>a;
 
-    vector<int>dp(x+1, 0);
+    vector<long long>dp(x+1, INT_MAX);
 
     dp[0] = 0;
 
-    for(int i = 1; i < x; i++){
+    for(int i = 1; i <= x; i++){
         for(int j = 0; j < n; j++){
-            if(i - v[j] > 0) dp[i] = min(dp[i], dp[i-v[j]] + 1);
+            if(i - v[j] >= 0) dp[i] = min(dp[i], dp[i-v[j]] + 1);
         }
     }
-    cout<<dp[3];
+    cout<< (dp[x] == INT_MAX ? -1 : dp[x]);
+
     return 0;
 }
