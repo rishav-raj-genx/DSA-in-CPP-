@@ -2,18 +2,24 @@
 using namespace std;
 
 int main(){
-    auto add = [](int a, int b){return a+b;};
-    auto sub = [](int a, int b){return a-b;};
-    auto mul = [](int a, int b){return a*b;};
-    auto div = [](int a, int b){return a/b;};
+    int a = 3, b = 5;
 
-    int a,b;
-    cin>>a>>b;
+    auto add = [&](){
+        a=7;
+        return a+b;};
+    auto sub = [&](){return a-b;};
+    auto mul = [&](){return a*b;};
+    auto div = [&](){return a/b;};
 
-    cout << add(a,b) << endl;
-    cout << sub(a,b) << endl;
-    cout << mul(a,b) << endl;
-    cout << div(a,b) << endl;
+    cout << a << endl;
+
+    cout << add() << endl;
+
+    cout << a << endl;
+
+    cout << mul() << endl;
+    cout << sub() << endl;
+    cout << div() << endl;
 
     return 0;
 }
