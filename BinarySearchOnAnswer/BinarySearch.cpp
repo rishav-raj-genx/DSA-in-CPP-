@@ -18,11 +18,19 @@ int main(){
     int n;
     cin>>n;
 
+    
     vector<int>v(n);
     for(auto &a: v) cin>>a;
-
+    
+    
     int t;
     cin>>t;
+    
+    auto good = [&](int t) -> bool {
+        
+        if()
+        
+    };
 
     cout<<binary(v, 0, n-1, t)<<endl;
 
