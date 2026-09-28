@@ -11,8 +11,6 @@ int main(){
 
   while(t--){
 
-    // long long n; 
-    // cin>>n;
 
     long long a, b, c;
     cin>>a>>b>>c;
