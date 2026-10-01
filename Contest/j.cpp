@@ -29,6 +29,6 @@ int main() {
         c++;
         if(c == 2 &&)
         }
-    }bubeccjcnkkd
+    }
     return 0;
 }
